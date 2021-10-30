@@ -10,7 +10,8 @@ import {
   GridProjects,
 } from '../components';
 
-const HomePage = () => {
+const HomePage = ({ data }) => {
+  console.log(data);
   return (
     <Layout>
       <Hero />
@@ -18,5 +19,31 @@ const HomePage = () => {
     </Layout>
   );
 };
+
+export const query = graphql`
+  {
+    allAirtable(
+      filter: { table: { eq: "Projects" } }
+      limit: 3
+      sort: { fields: data___date, order: DESC }
+    ) {
+      nodes {
+        id
+        data {
+          date
+          name
+          type
+          image {
+            localFiles {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default HomePage;
