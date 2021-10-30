@@ -1,11 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Title = () => {
-  return (
-   <h2>title component</h2>
-  )
-}
+  return <h2>title component</h2>;
+};
 const Wrapper = styled.div`
   text-align: center;
   margin-bottom: 2rem;
@@ -21,5 +19,5 @@ const Wrapper = styled.div`
       font-weight: 700;
     }
   }
-`
-export default Title
+`;
+export default Title;

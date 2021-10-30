@@ -1,22 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
-import { GatsbyImage } from 'gatsby-plugin-image'
-import Title from './Title'
-import algoliasearch from 'algoliasearch/lite'
+import React from 'react';
+import styled from 'styled-components';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import Title from './Title';
+import algoliasearch from 'algoliasearch/lite';
 import {
   InstantSearch,
   SearchBox,
   Hits,
   connectHits,
-} from 'react-instantsearch-dom'
-
-
+} from 'react-instantsearch-dom';
 
 const Search = () => {
-  return (
-    <h2>algolia search</h2>
-  )
-}
+  return <h2>algolia search</h2>;
+};
 
 const Wrapper = styled.section`
   padding: 5rem 0;
@@ -50,7 +46,7 @@ const Wrapper = styled.section`
       }
     }
   }
-`
+`;
 
 const Container = styled.div`
   display: grid;
@@ -89,6 +85,6 @@ const Container = styled.div`
   @media (min-width: 1200px) {
     grid-template-columns: repeat(4, 1fr);
   }
-`
+`;
 
-export default Search
+export default Search;

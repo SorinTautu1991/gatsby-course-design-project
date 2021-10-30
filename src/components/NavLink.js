@@ -1,13 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 
-import styled from 'styled-components'
-import { Link } from 'gatsby'
-import { GatsbyContext } from '../context/context'
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { GatsbyContext } from '../context/context';
 const NavLink = () => {
-  return (
-    <h2>nav link</h2>
-  )
-}
+  return <h2>nav link</h2>;
+};
 
 const Wrapper = styled.li`
   padding: 1rem 0;
@@ -72,6 +70,6 @@ const Wrapper = styled.li`
     left: 50%;
     transform: translateX(-50%);
   }
-`
+`;
 
-export default NavLink
+export default NavLink;

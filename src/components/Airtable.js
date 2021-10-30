@@ -1,2 +1,2 @@
-import Airtable from 'airtable'
-export default "airtable"
+import Airtable from 'airtable';
+export default 'airtable';

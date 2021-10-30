@@ -1,17 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Title from './Title'
-import styled from 'styled-components'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import SearchButtons from './SearchButtons'
+import React from 'react';
+import { Link } from 'gatsby';
+import Title from './Title';
+import styled from 'styled-components';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import SearchButtons from './SearchButtons';
 
 const Projects = () => {
-  
-
-  return (
-    <h2>projects</h2>
-  )
-}
+  return <h2>projects</h2>;
+};
 
 const Wrapper = styled.section`
   background: var(--clr-grey-10);
@@ -89,5 +85,5 @@ const Wrapper = styled.section`
     margin: 0 auto;
     margin-top: 3rem;
   }
-`
-export default Projects
+`;
+export default Projects;

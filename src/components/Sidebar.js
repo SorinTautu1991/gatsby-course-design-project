@@ -1,13 +1,11 @@
-import React, { useContext } from 'react'
-import styled from 'styled-components'
-import { MdClose } from 'react-icons/md'
-import { Link } from 'gatsby'
-import { GatsbyContext } from '../context/context'
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import { MdClose } from 'react-icons/md';
+import { Link } from 'gatsby';
+import { GatsbyContext } from '../context/context';
 const Sidebar = () => {
-  
-  return (
-    <h2>sidebar component</h2>)
-}
+  return <h2>sidebar component</h2>;
+};
 const Wrapper = styled.aside`
   position: fixed;
   top: 0;
@@ -68,5 +66,5 @@ const Wrapper = styled.aside`
       }
     }
   }
-`
-export default Sidebar
+`;
+export default Sidebar;

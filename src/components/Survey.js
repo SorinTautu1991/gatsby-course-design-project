@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import Title from './Title'
-import styled from 'styled-components'
-import base from './Airtable'
-import { FaVoteYea } from 'react-icons/fa'
+import React, { useEffect, useState } from 'react';
+import Title from './Title';
+import styled from 'styled-components';
+import base from './Airtable';
+import { FaVoteYea } from 'react-icons/fa';
 
 const Survey = () => {
- 
-  return (
-   <h2>survey component</h2>
-  )
-}
+  return <h2>survey component</h2>;
+};
 
 const Wrapper = styled.section`
   .container {
@@ -75,5 +72,5 @@ const Wrapper = styled.section`
       }
     }
   }
-`
-export default Survey
+`;
+export default Survey;

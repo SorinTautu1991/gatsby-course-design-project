@@ -1,13 +1,11 @@
-import React from 'react'
-import Title from './Title'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
+import React from 'react';
+import Title from './Title';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 const GridProjects = ({ projects, title }) => {
-  return (
-    <h2>grid projects</h2>
-  )
-}
+  return <h2>grid projects</h2>;
+};
 
 const Wrapper = styled.section`
   background: var(--clr-grey-10);
@@ -97,6 +95,6 @@ const Wrapper = styled.section`
     margin: 0 auto;
     margin-top: 3rem;
   }
-`
+`;
 
-export default GridProjects
+export default GridProjects;

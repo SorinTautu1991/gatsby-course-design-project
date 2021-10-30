@@ -1,15 +1,13 @@
-import React, { useContext } from 'react'
-import styled from 'styled-components'
-import logo from '../images/logo.svg'
-import { GoThreeBars } from 'react-icons/go'
-import { Link } from 'gatsby'
-import NavLink from './NavLink'
-import { GatsbyContext } from '../context/context'
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import logo from '../images/logo.svg';
+import { GoThreeBars } from 'react-icons/go';
+import { Link } from 'gatsby';
+import NavLink from './NavLink';
+import { GatsbyContext } from '../context/context';
 const Navbar = () => {
-  return (
-   <h2>navbar component</h2>
-  )
-}
+  return <h2>navbar component</h2>;
+};
 
 const Wrapper = styled.nav`
   position: relative;
@@ -87,6 +85,6 @@ const Wrapper = styled.nav`
       position: relative;
     }
   }
-`
+`;
 
-export default Navbar
+export default Navbar;

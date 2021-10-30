@@ -1,12 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 const Hero = () => {
-  return (
-    <h2>hero component</h2>
-  )
-}
+  return <h2>hero component</h2>;
+};
 
 const Wrapper = styled.section`
   height: 100vh;
@@ -67,6 +65,6 @@ const Wrapper = styled.section`
       }
     }
   }
-`
+`;
 
-export default Hero
+export default Hero;

@@ -1,3 +1,2 @@
-import React, { useState } from 'react'
-import sublinks from '../constants/links'
-
+import React, { useState } from 'react';
+import sublinks from '../constants/links';

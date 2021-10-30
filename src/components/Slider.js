@@ -1,46 +1,46 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
-import Title from './Title'
-import styled from 'styled-components'
-import { FaQuoteRight } from 'react-icons/fa'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { FiChevronRight, FiChevronLeft } from 'react-icons/fi'
+import Title from './Title';
+import styled from 'styled-components';
+import { FaQuoteRight } from 'react-icons/fa';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 
 const Slider = ({ customers = [] }) => {
-  const [index, setIndex] = React.useState(0)
+  const [index, setIndex] = React.useState(0);
 
   const nextSlide = () => {
     setIndex(oldIndex => {
-      let index = oldIndex + 1
+      let index = oldIndex + 1;
       if (index > customers.length - 1) {
-        index = 0
+        index = 0;
       }
-      return index
-    })
-  }
+      return index;
+    });
+  };
   const prevSlide = () => {
     setIndex(oldIndex => {
-      let index = oldIndex - 1
+      let index = oldIndex - 1;
       if (index < 0) {
-        index = customers.length - 1
+        index = customers.length - 1;
       }
-      return index
-    })
-  }
+      return index;
+    });
+  };
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex(oldIndex => {
-        let index = oldIndex + 1
+        let index = oldIndex + 1;
         if (index > customers.length - 1) {
-          index = 0
+          index = 0;
         }
-        return index
-      })
-    }, 5000)
+        return index;
+      });
+    }, 5000);
     return () => {
-      clearInterval(slider)
-    }
-  }, [index])
+      clearInterval(slider);
+    };
+  }, [index]);
 
   return (
     <Wrapper className="section">
@@ -49,18 +49,18 @@ const Slider = ({ customers = [] }) => {
         {customers.map((customer, customerIndex) => {
           const {
             data: { image, name, title, quote },
-          } = customer
-          const customerImg = getImage(image.localFiles[0])
+          } = customer;
+          const customerImg = getImage(image.localFiles[0]);
 
-          let position = 'nextSlide'
+          let position = 'nextSlide';
           if (customerIndex === index) {
-            position = 'activeSlide'
+            position = 'activeSlide';
           }
           if (
             customerIndex === index - 1 ||
             (index === 0 && customerIndex === customers.length - 1)
           ) {
-            position = 'lastSlide'
+            position = 'lastSlide';
           }
 
           return (
@@ -75,7 +75,7 @@ const Slider = ({ customers = [] }) => {
               <p className="text">{quote}</p>
               <FaQuoteRight className="icon" />
             </article>
-          )
+          );
         })}
         <button className="prev" onClick={prevSlide}>
           <FiChevronLeft />
@@ -85,8 +85,8 @@ const Slider = ({ customers = [] }) => {
         </button>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.div`
   background: var(--clr-grey-10);
@@ -103,7 +103,7 @@ const Wrapper = styled.div`
     .img {
       border-radius: 50%;
       margin-bottom: 1rem;
-       display: inline-block !important;
+      display: inline-block !important;
     }
     h4 {
       text-transform: uppercase;
@@ -180,5 +180,5 @@ const Wrapper = styled.div`
       transform: translateX(100%);
     }
   }
-`
-export default Slider
+`;
+export default Slider;

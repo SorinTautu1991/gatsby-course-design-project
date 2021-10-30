@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 const Footer = () => {
   return (
     <Wrapper>
@@ -8,8 +8,8 @@ const Footer = () => {
         Built with Gatsby
       </p>
     </Wrapper>
-  )
-}
+  );
+};
 const Wrapper = styled.footer`
   height: 5rem;
   display: grid;
@@ -24,5 +24,5 @@ const Wrapper = styled.footer`
       font-size: 0.75rem;
     }
   }
-`
-export default Footer
+`;
+export default Footer;
