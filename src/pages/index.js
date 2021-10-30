@@ -1,5 +1,5 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
 import {
   Layout,
   Hero,
@@ -8,14 +8,15 @@ import {
   Survey,
   Slider,
   GridProjects,
-} from '../components'
+} from '../components';
 
 const HomePage = () => {
-  
   return (
-    <h2>gatsby airtable starter</h2>
-  )
-}
+    <Layout>
+      <Hero />
+      <About />
+    </Layout>
+  );
+};
 
-
-export default HomePage
+export default HomePage;

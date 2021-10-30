@@ -1,10 +1,11 @@
-import React from "react"
-import { Layout } from "../../components"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from 'react';
+import { Layout } from '../../components';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+
 const Payments = () => {
-  return <h2>payments page</h2>
-}
+  return <h2>payments page</h2>;
+};
 
 const Wrapper = styled.main`
   margin-top: -5rem;
@@ -27,6 +28,6 @@ const Wrapper = styled.main`
       font-size: 4rem;
     }
   }
-`
+`;
 
-export default Payments
+export default Payments;

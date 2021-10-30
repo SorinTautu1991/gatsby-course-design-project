@@ -1,7 +1,7 @@
-import React from "react"
-import { Layout } from "../components"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from 'react';
+import { Layout } from '../components';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 const Error = () => {
   return (
     <Layout>
@@ -15,8 +15,8 @@ const Error = () => {
         </div>
       </Wrapper>
     </Layout>
-  )
-}
+  );
+};
 
 const Wrapper = styled.main`
   margin-top: -5rem;
@@ -37,6 +37,6 @@ const Wrapper = styled.main`
     margin-top: 1.5rem;
     margin-bottom: 1.75rem;
   }
-`
+`;
 
-export default Error
+export default Error;
