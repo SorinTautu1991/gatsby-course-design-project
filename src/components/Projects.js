@@ -1,12 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import Title from './Title';
 import styled from 'styled-components';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import SearchButtons from './SearchButtons';
 
-const Projects = () => {
-  return <h2>projects</h2>;
+const Projects = ({ projects: data, title, page }) => {
+  const [projects, setProjects] = useState(data);
+
+  // more logic here
+
+  const setBackToAll = () => {
+    setProjects(data);
+  };
+
+  return (
+    <Wrapper className="section">
+      <Title title={title || 'projects'} />
+      {/* search buttons */}
+      {page && (
+        <SearchButtons
+          projects={data}
+          setProjects={setProjects}
+          setBackToAll={setBackToAll}
+        />
+      )}
+      <div className="section-center">
+        {projects.map(item => {
+          const { id } = item;
+          const { name, type, image } = item.data;
+          return (
+            <article key={id}>
+              <div className="container">
+                <GatsbyImage
+                  image={getImage(image.localFiles[0])}
+                  alt={name}
+                  className="img"
+                />
+                <div className="info">
+                  <p> - {type} - </p>
+                  <h3>{name}</h3>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      {!page && (
+        <Link to="/projects" className="btn">
+          All projects
+        </Link>
+      )}
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section`
