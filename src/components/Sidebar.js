@@ -3,9 +3,32 @@ import styled from 'styled-components';
 import { MdClose } from 'react-icons/md';
 import { Link } from 'gatsby';
 import { GatsbyContext } from '../context/context';
+
 const Sidebar = () => {
-  return <h2>sidebar component</h2>;
+  const { links, hideSidebar } = useContext(GatsbyContext);
+
+  return (
+    <Wrapper>
+      <div className="container">
+        <button onClick={hideSidebar}>
+          <MdClose className="icon" />
+        </button>
+        <div className="links">
+          {links.map((link, index) => {
+            const { url, label, icon } = link;
+            return (
+              <Link to={url} key={index} onClick={hideSidebar}>
+                {icon}
+                {label}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </Wrapper>
+  );
 };
+
 const Wrapper = styled.aside`
   position: fixed;
   top: 0;

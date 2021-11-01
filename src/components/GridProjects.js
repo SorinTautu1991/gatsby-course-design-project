@@ -3,8 +3,33 @@ import Title from './Title';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+
 const GridProjects = ({ projects, title }) => {
-  return <h2>grid projects</h2>;
+  return (
+    <Wrapper>
+      <Title title={title || 'projects'} />
+      <div className="tile-layout">
+        {projects.map((project, index) => {
+          const { id } = project;
+          const { name, type } = project.data;
+          const image = project.data.image.localFiles[0];
+          return (
+            <article key={id} className={`div-${index}`}>
+              <GatsbyImage image={getImage(image)} alt={name} className="img" />
+              <div className="info">
+                <p>
+                  - {type} - {name} -{' '}
+                </p>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      <Link to="/projects" className="btn">
+        All projects
+      </Link>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section`
